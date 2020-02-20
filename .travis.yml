@@ -1,0 +1,8 @@
+language: java
+
+git:
+  depth: 3
+
+script:
+  - head -n 4 Main.java | sed -E 's/(.*)\:(.*)/\2/g'
+  - javac Main.java && java Main
